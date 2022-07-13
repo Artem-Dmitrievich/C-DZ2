@@ -4,20 +4,17 @@
 
 //Основная формула(для себя)
 //Sn = S(1 + x / 100)*n; S = первоначальная сумма вклада, x = процент, Sn = сумма конечная, n-срок вклада
-
-int x = 100;
-//x - вклад
-int y = 200;
-//y - сумма конечная
-int p = 10;
-//p - проценты
-
+Console.WriteLine("сумма вклада: ");
+double x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Какой %: ");
+int p = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Желаемая сумма: ");
+int y = Convert.ToInt32(Console.ReadLine());
 int i = 0;
-
 while (x < y)
 {
-    x = 1 + p / 100;
-    x = (100 * x) / 100;
-    i++;
+    x = x + ((x * p)/100);
+    i = i + 1;
 }
-Console.WriteLine(i);
+Console.Write("Понадобится: ");
+Console.Write(i);
